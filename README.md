@@ -1,5 +1,12 @@
 # OSSを利用したサンプル
-OSSをサービスのストレージの一部として利用する場合のサンプルアプリケーション。
+OSSをサービスのストレージの一部として利用する場合のサンプルアプリケーション。  
+OSSにてユーザのコンテンツを管理する場合、データベースと併用して情報を管理する必要がでてくる。  
+その流れを確認するためのサンプルアプリケーション。
+
+確認ポイント
+- ファイルをアップロードしよう
+- OSS上に`user_name/file_name`の形で保存されていることを確認しよう
+- データベース(sqlite)にも情報が書き込まれていることを確認しよう
 
 ## セットアップ
 必要パッケージのインストール
@@ -18,7 +25,10 @@ $ sqlite3 db/development.db < db/schema.sql
 
 環境変数の設定
 ```
-$ export 
+$ export ALIYUN_ACCESS_KEY=xxxxxxxxxx
+$ export ALIYUN_ACCESS_SECRET=xxxxxxxxxx
+$ export ALIYUN_ACCESS_REGION=xxxxxxxxxx
+$ export ALIYUN_OSS_BUCKET_NAME=xxxxxxxxxx
 ```
 
 アプリの起動
