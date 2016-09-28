@@ -1,0 +1,7 @@
+{
+    "require": {
+        "aliyuncs/oss-sdk-php": "^2.0",
+        "slim/slim": "^3.0",
+        "slim/twig-view": "^2.1"
+    }
+}
